@@ -19,7 +19,11 @@ struct AddTaskView: View {
             HStack {
                 Text("Task name")
                 TextField("Buy a chocolate", text: $name)
-            }
+            }.padding()
+            
+            Spacer()
+            Spacer()
+            
             Button(action: buttonAddTapped) {
                 Text("Add Task")
             }

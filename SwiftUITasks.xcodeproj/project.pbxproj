@@ -65,10 +65,10 @@
 			children = (
 				CD9B87A4275A8B7400F109A5 /* SwiftUITasksApp.swift */,
 				CD9B87A5275A8B7400F109A5 /* ContentView.swift */,
+				CD9B87C7275A8F6A00F109A5 /* AddTaskView.swift */,
 				CD9B87A6275A8B7400F109A5 /* Persistence.swift */,
 				CD9B87A7275A8B7600F109A5 /* Assets.xcassets */,
 				CD9B87A2275A8B7400F109A5 /* SwiftUITasks.xcdatamodeld */,
-				CD9B87C7275A8F6A00F109A5 /* AddTaskView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
