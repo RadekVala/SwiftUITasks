@@ -11,6 +11,7 @@ struct AddTaskView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     
+    @Binding var isPresented: Bool
     @State var name: String = ""
     
     var body: some View {
@@ -18,6 +19,7 @@ struct AddTaskView: View {
         VStack {
             Label("Create a new task", systemImage: "pencil.circle.fill")
                 .padding(.vertical)
+                
             HStack {
                 Text("Task name")
                 TextField("Buy a chocolate", text: $name)
@@ -40,10 +42,11 @@ struct AddTaskView: View {
         let newItem = Task(context: viewContext)
         newItem.name = name
         newItem.timestamp = Date()
-        newItem.completed = false
+        newItem.finished = "yes"
         
         do {
             try viewContext.save()
+            isPresented = false
             
         } catch {
             // Replace this implementation with code to handle the error appropriately.

@@ -23,7 +23,7 @@ struct ContentView: View {
             List {
                 ForEach(items) { item in
                     NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                        TaskDetailView(currentTask: item)
                     } label: {
                         if let name = item.name{
                             Text(name)
@@ -49,7 +49,7 @@ struct ContentView: View {
             }
             Text("Select an item")
         }.sheet(isPresented: $addTaskPresented) {
-            AddTaskView()
+            AddTaskView(isPresented: $addTaskPresented)
         }
     }
 
@@ -88,17 +88,9 @@ struct ContentView: View {
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
-
-
