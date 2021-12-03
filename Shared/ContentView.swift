@@ -25,7 +25,12 @@ struct ContentView: View {
                     NavigationLink {
                         Text("Item at \(item.timestamp!, formatter: itemFormatter)")
                     } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+                        if let name = item.name{
+                            Text(name)
+                        } else {
+                            Text("Task name was not set")
+                        }
+                        
                     }
                 }
                 .onDelete(perform: deleteItems)
