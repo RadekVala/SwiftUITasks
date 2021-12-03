@@ -16,6 +16,8 @@ struct AddTaskView: View {
     var body: some View {
         
         VStack {
+            Label("Create a new task", systemImage: "pencil.circle.fill")
+                .padding(.vertical)
             HStack {
                 Text("Task name")
                 TextField("Buy a chocolate", text: $name)
