@@ -12,9 +12,11 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Task.timestamp, ascending: true)],
         animation: .default)
-    private var items: FetchedResults<Item>
+    private var items: FetchedResults<Task>
+    
+    @State var addTaskPresented = false
 
     var body: some View {
         NavigationView {
@@ -41,12 +43,16 @@ struct ContentView: View {
                 }
             }
             Text("Select an item")
+        }.sheet(isPresented: $addTaskPresented) {
+            AddTaskView()
         }
     }
 
     private func addItem() {
+        addTaskPresented.toggle()
+        /*
         withAnimation {
-            let newItem = Item(context: viewContext)
+            let newItem = Task(context: viewContext)
             newItem.timestamp = Date()
 
             do {
@@ -58,6 +64,7 @@ struct ContentView: View {
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
+         */
     }
 
     private func deleteItems(offsets: IndexSet) {
@@ -88,3 +95,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
+
+

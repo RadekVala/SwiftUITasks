@@ -17,6 +17,8 @@
 		CD9B87BC275A8B7600F109A5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9B87A6275A8B7400F109A5 /* Persistence.swift */; };
 		CD9B87BD275A8B7600F109A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9B87A7275A8B7600F109A5 /* Assets.xcassets */; };
 		CD9B87BE275A8B7600F109A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9B87A7275A8B7600F109A5 /* Assets.xcassets */; };
+		CD9B87C8275A8F6A00F109A5 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9B87C7275A8F6A00F109A5 /* AddTaskView.swift */; };
+		CD9B87C9275A8F6A00F109A5 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9B87C7275A8F6A00F109A5 /* AddTaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		CD9B87AC275A8B7600F109A5 /* SwiftUITasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9B87B2275A8B7600F109A5 /* SwiftUITasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9B87B4275A8B7600F109A5 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		CD9B87C7275A8F6A00F109A5 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,7 @@
 				CD9B87A6275A8B7400F109A5 /* Persistence.swift */,
 				CD9B87A7275A8B7600F109A5 /* Assets.xcassets */,
 				CD9B87A2275A8B7400F109A5 /* SwiftUITasks.xcdatamodeld */,
+				CD9B87C7275A8F6A00F109A5 /* AddTaskView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -185,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD9B87B7275A8B7600F109A5 /* SwiftUITasksApp.swift in Sources */,
+				CD9B87C8275A8F6A00F109A5 /* AddTaskView.swift in Sources */,
 				CD9B87BB275A8B7600F109A5 /* Persistence.swift in Sources */,
 				CD9B87B5275A8B7600F109A5 /* SwiftUITasks.xcdatamodeld in Sources */,
 				CD9B87B9275A8B7600F109A5 /* ContentView.swift in Sources */,
@@ -196,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD9B87B8275A8B7600F109A5 /* SwiftUITasksApp.swift in Sources */,
+				CD9B87C9275A8F6A00F109A5 /* AddTaskView.swift in Sources */,
 				CD9B87BC275A8B7600F109A5 /* Persistence.swift in Sources */,
 				CD9B87B6275A8B7600F109A5 /* SwiftUITasks.xcdatamodeld in Sources */,
 				CD9B87BA275A8B7600F109A5 /* ContentView.swift in Sources */,
